@@ -1,0 +1,105 @@
+{
+  "generate_query.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "claim": "This director is known for his work on Miss Potter. The Academy of Motion Picture Arts and Sciences presents the award in which he was nominated for his work in \"Babe\".",
+        "titles": [
+          "Academy Award for Best Director",
+          "Chris Noonan",
+          "Miss Potter"
+        ]
+      },
+      {
+        "claim": "1990 Film that Khiladiyon Ka Khiladi is loosely based on stars this actor who is best known for martial arts action films.",
+        "titles": [
+          "Lionheart (1990 film)",
+          "Jean-Claude Van Damme",
+          "Khiladiyon Ka Khiladi"
+        ]
+      }
+    ],
+    "signature": {
+      "instructions": "Using the provided `claim` and `notes`, generate a detailed reasoning process that justifies the claim and formulate an insightful query that can be used to gather relevant information. Ensure that the reasoning is clear and logically structured to support the claim effectively.",
+      "fields": [
+        {
+          "prefix": "Claim:",
+          "description": "${claim}"
+        },
+        {
+          "prefix": "Notes:",
+          "description": "${notes}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Query:",
+          "description": "${query}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "append_notes.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "claim": "This director is known for his work on Miss Potter. The Academy of Motion Picture Arts and Sciences presents the award in which he was nominated for his work in \"Babe\".",
+        "titles": [
+          "Academy Award for Best Director",
+          "Chris Noonan",
+          "Miss Potter"
+        ]
+      },
+      {
+        "claim": "1990 Film that Khiladiyon Ka Khiladi is loosely based on stars this actor who is best known for martial arts action films.",
+        "titles": [
+          "Lionheart (1990 film)",
+          "Jean-Claude Van Damme",
+          "Khiladiyon Ka Khiladi"
+        ]
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `claim`, `notes`, `context`, produce the fields `new_notes`, `titles`.",
+      "fields": [
+        {
+          "prefix": "Claim:",
+          "description": "${claim}"
+        },
+        {
+          "prefix": "Notes:",
+          "description": "${notes}"
+        },
+        {
+          "prefix": "Context:",
+          "description": "${context}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "New Notes:",
+          "description": "${new_notes}"
+        },
+        {
+          "prefix": "Titles:",
+          "description": "${titles}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "2.6.15",
+      "cloudpickle": "3.1"
+    }
+  }
+}
