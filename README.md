@@ -12,9 +12,11 @@ This repository contains a multi-hop agent implementation using DSPy.
 3. Ensure you have an OpenAI API key in your `.env` file
 4. Run the `multihop_agent.ipynb` notebook to train and evaluate the agent.
    
-## Note
+## Notes
 
-Make sure your `.env` file contains your OpenAI API key:
+1. Make sure your `.env` file contains your OpenAI API key:
 ```
 OPENAI_API_KEY=your_api_key_here
 ```
+
+2. The finetuned_4o_mini.pkl file is from an agent finetuned on 10 datapoints. It is only meant to be an example.
